@@ -7,8 +7,8 @@ body {
     align-items: center;
     height: 100vh;
     background-image: url('https://vsthemes.org/uploads/posts/2024-11/7331f0ad3d_just-a-chill-guy.webp');
-    background-size: cover;
-    background-position: center;
+    background-size: cover !important;
+    background-position: center !important;
 }
 
 .container {
