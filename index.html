@@ -9,10 +9,11 @@
     <style>
         body {
             background-image: url('https://i.ibb.co/4Vcs9VW/7331f0ad3d-just-a-chill-guy-ezgif-com-webp-to-png-converter.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
+            background-size: cover; /* ยืดพื้นหลังให้เต็มจอ */
+            background-position: center; /* ตั้งตำแหน่งพื้นหลังให้อยู่กลาง */
+            background-repeat: no-repeat; /* ป้องกันการทำซ้ำพื้นหลัง */
+            background-attachment: fixed; /* ทำให้พื้นหลังไม่เลื่อน */
+            height: 100vh; /* ให้พื้นหลังเต็มความสูงของหน้าจอ */
             margin: 0;
             display: flex;
             justify-content: center;
@@ -48,8 +49,6 @@
             margin: 10px;
             padding: 12px 25px;
             font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
             text-decoration: none;
             border-radius: 8px;
             transition: background-color 0.3s ease;
@@ -57,12 +56,14 @@
             max-width: 250px;
         }
 
-        .button:hover {
-            background-color: #0056b3;
-        }
-
         /* สำหรับหน้าจอเล็ก */
         @media (max-width: 768px) {
+            body {
+                background-size: cover; /* ยืดพื้นหลังเต็มจอ */
+                background-position: center; /* ตั้งตำแหน่งพื้นหลังให้อยู่กลาง */
+                background-attachment: fixed; /* ทำให้พื้นหลังไม่เลื่อน */
+            }
+
             .container {
                 flex-direction: column; /* เปลี่ยนให้เป็นแนวตั้งบนมือถือ */
                 align-items: center;
@@ -96,7 +97,7 @@
         <!-- ปุ่มต่างๆ ทางซ้าย -->
         <div class="button-container">
             <h1>สมัครงานหน่วยงานต่างๆ</h1>
-            <p>เลือกอาชีพที่คุณต้องการสมัครจากลิงก์ด้านล่าง</p>
+            <p></p>
             <a href="https://forms.gle/X4urRnHjp14qucgR7" class="button" id="doctor" target="_blank" title="สมัครเป็นหมอ">หมอ</a>
             <a href="https://forms.gle/Tardgu8vuiRbMwcy6" class="button" id="police" target="_blank" title="สมัครเป็นตำรวจ">ตำรวจ</a>
             <a href="https://forms.gle/PTWAygqrWjaiBiSY8" class="button" id="technician" target="_blank" title="สมัครเป็นช่าง">ช่าง</a>
