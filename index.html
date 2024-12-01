@@ -3,37 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>สมัครหน่วยงานต่างๆ</title>
+    <title>สมัครงานหน่วยงานต่างๆ</title>
     <link rel="stylesheet" href="styles.css">
     
-    <!-- เพิ่มการกำหนดพื้นหลังในแท็ก <style> -->
     <style>
         body {
-            background-image: url('https://i.ibb.co/4Vcs9VW/7331f0ad3d-just-a-chill-guy-ezgif-com-webp-to-png-converter.png'); /* ใส่ URL ของภาพพื้นหลัง */
-            background-size: cover; /* ปรับขนาดให้ครอบคลุมทั้งหน้า */
-            background-position: center; /* จัดตำแหน่งให้ภาพอยู่ตรงกลาง */
-            background-repeat: no-repeat; /* ป้องกันไม่ให้ภาพซ้ำ */
-            height: 100vh; /* เพิ่มความสูงให้เต็มหน้าจอ */
-            margin: 0; /* ลบ margin ที่ไม่จำเป็น */
+            background-image: url('https://i.ibb.co/4Vcs9VW/7331f0ad3d-just-a-chill-guy-ezgif-com-webp-to-png-converter.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row; /* ใช้ row เพื่อให้โลโก้และปุ่มอยู่ข้างๆกัน */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .logo {
+            display: block;
+            width: 250px; /* ขยายขนาดโลโก้ */
+            margin-right: 30px; /* ให้มีช่องว่างระหว่างโลโก้กับปุ่ม */
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column; /* ให้ปุ่มเรียงในแนวตั้ง */
+            align-items: flex-start; /* เรียงปุ่มทางซ้าย */
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            width: 80%;
+            max-width: 250px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* สำหรับหน้าจอเล็ก */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* เปลี่ยนให้เป็นแนวตั้งบนมือถือ */
+                align-items: center;
+            }
+
+            .logo {
+                width: 200px; /* ลดขนาดโลโก้ลงบนมือถือ */
+                margin-right: 0;
+                margin-bottom: 20px; /* เพิ่มช่องว่างระหว่างโลโก้กับปุ่ม */
+            }
+
+            .button-container {
+                align-items: center; /* ให้ปุ่มอยู่ตรงกลาง */
+                width: 100%;
+            }
+
+            .button {
+                width: 80%;
+                max-width: 250px;
+                padding: 12px 20px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>สมัครหน่วยงานต่างๆ</h1>
+        <!-- โลโก้ทางขวา -->
+        <img src="https://cdn.discordapp.com/icons/1311329438969106513/fb235c931ad570db8bfcaad97f88f44b.webp?size=1024&format=webp&width=460&height=460" alt="เว็บไซต์สมัครหน่วยงาน" class="logo">
+
+        <!-- ปุ่มต่างๆ ทางซ้าย -->
         <div class="button-container">
-            <a href="https://forms.gle/X4urRnHjp14qucgR7" class="button" id="doctor" target="_blank">หมอ</a>
-            <a href="https://forms.gle/Tardgu8vuiRbMwcy6" class="button" id="police" target="_blank">ตำรวจ</a>
-            <a href="https://forms.gle/PTWAygqrWjaiBiSY8" class="button" id="technician" target="_blank">ช่าง</a>
-            <a href="https://forms.gle/8YbGJcTQbEC7nLZz7" class="button" id="chef" target="_blank">เชฟ</a>
+            <h1>สมัครงานหน่วยงานต่างๆ</h1>
+            <p>เลือกอาชีพที่คุณต้องการสมัครจากลิงก์ด้านล่าง</p>
+            <a href="https://forms.gle/X4urRnHjp14qucgR7" class="button" id="doctor" target="_blank" title="สมัครเป็นหมอ">หมอ</a>
+            <a href="https://forms.gle/Tardgu8vuiRbMwcy6" class="button" id="police" target="_blank" title="สมัครเป็นตำรวจ">ตำรวจ</a>
+            <a href="https://forms.gle/PTWAygqrWjaiBiSY8" class="button" id="technician" target="_blank" title="สมัครเป็นช่าง">ช่าง</a>
+            <a href="https://forms.gle/8YbGJcTQbEC7nLZz7" class="button" id="chef" target="_blank" title="สมัครเป็นเชฟ">เชฟ</a>
         </div>
     </div>
 
-    <div id="popup" class="popup">
-        <p id="popup-message">ข้อความป๊อปอัพ</p>
-    </div>
-
-    <!-- Footer section -->
     <footer>
         <p>เว็บนี้สร้างโดย ChatGPT <img src="https://th.bing.com/th?id=ODLS.dba34cd2-28cd-4ece-87bd-016f9830d170&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.22023.svg/1024px-OpenAI_Logo_2023.svg.png" alt="ChatGPT Logo"></p>
     </footer>
