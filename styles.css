@@ -14,11 +14,9 @@ body {
 .container {
     text-align: center;
     margin-top: 50px;
-    background: rgba(255, 255, 255, 0.3); /* พื้นหลังโปร่งแสง */
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
@@ -37,32 +35,37 @@ h1 {
     display: inline-block;
     padding: 18px 30px;
     margin: 15px;
-    background-color: transparent;
+    background-color: transparent; /* ทำให้พื้นหลังปุ่มใส */
     color: #FFFFFF; /* สีข้อความปุ่ม */
     text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.7); /* กรอบบางๆ ให้ปุ่มดูเด่น */
     border-radius: 50px;
     font-size: 1.2em;
     font-weight: 500;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* ทำให้ปุ่มมีเอฟเฟกต์เบลอ */
     -webkit-backdrop-filter: blur(10px);
 }
 
 .button:hover {
-    background-color: rgba(76, 175, 80, 0.1); 
-    color: white;
-    border-color: #FFCC33;
+    background-color: rgba(255, 255, 255, 0.1); /* เพิ่มสีเบาๆ ตอน hover */
+    color: #76C7C0; /* เปลี่ยนสีข้อความเมื่อ hover */
+    border-color: #76C7C0; /* เปลี่ยนสีกรอบเมื่อ hover */
     transform: translateY(-8px) scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+    transform: translateY(-2px) scale(0.98);
 }
 
 footer {
     display: inline-block;
     text-align: center;
     padding: 10px 20px;
-    font-size: 0.9em;
+    font-size: 0.5em;
     color: #fff;
     background-color: transparent;
     position: fixed;
